@@ -1,0 +1,19 @@
+/* Estilos específicos do Footer */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .image-container {
+    margin-top: 1rem;
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
