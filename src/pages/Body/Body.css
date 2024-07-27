@@ -1,20 +1,61 @@
 /* Estilos específicos do Body */
 .body {
-    text-align: center;
-    padding: 2rem 1rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative; /* Add this to ensure the WhatsApp icon positions correctly */
+}
+
+.hero {
+  background-color: #f5f5f5;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.whatsapp-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-icon {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Ensure the height matches the width for a square icon */
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+  .body {
+    padding: 3rem 2rem;
   }
-  
-  .hero {
-    background-color: #f5f5f5;
-    padding: 2rem;
-  }
-  
+
   .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
   }
-  
+
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
-  
+}
+
+@media (min-width: 768px) {
+  .body {
+    padding: 4rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.8rem;
+  }
+}

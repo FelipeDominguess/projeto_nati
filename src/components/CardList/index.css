@@ -1,0 +1,63 @@
+/* Estilos do CardList */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.card {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-question {
+  font-weight: bold;
+}
+
+.card-answer {
+  margin-top: 10px;
+  transition: max-height 0.3s ease;
+}
+
+/* Estilo para o cartão aberto */
+.card.open .card-answer {
+  max-height: 200px; /* Ajuste conforme necessário */
+}
+
+.card:not(.open) .card-answer {
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+  .card-list {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1;
+    margin: 5px;
+  }
+}

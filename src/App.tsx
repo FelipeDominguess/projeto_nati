@@ -3,11 +3,14 @@ import './App.css';
 import Header from './pages/Header';
 import Body from './pages/Body';
 import Footer from './pages/Footer';
+import RegistrationPage from './pages/RegisterPage/RegisterPage'; // Import the registration page
+import Login from './pages/Login/login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import CursosOnline from './pages/CourseOn';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,18 +24,23 @@ export const firebaseConfig = {
   measurementId: "G-B8JR6VEZ5B"
 };
 
-
-
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Body />
+      <Routes>
+        <Route path="/" element={<Body />} />
+        {/* <Route path="/blog" element={<Blog />} /> */}
+        <Route path="/cursos-online" element={<CursosOnline />} />
+        <Route path="/inscricao" element={<RegistrationPage />} /> {/* Add the new route */}
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 
